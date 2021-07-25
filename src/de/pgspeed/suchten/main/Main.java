@@ -44,10 +44,7 @@ public class Main extends JavaPlugin{
         //Servermessages
         pluginManager.registerEvents(new PlayerJoin(), this);
         pluginManager.registerEvents(new PlayerQuit(), this);
-
-        FileConfiguration fileConfiguration = this.getConfig();
-        fileConfiguration.set("Test", 2);
-        this.saveConfig();
+        
     }
 
     @Override

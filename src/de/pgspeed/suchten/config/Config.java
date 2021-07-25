@@ -14,7 +14,7 @@ public class Config {
     public Config(String name, File path){
         file = new File(path, name);
 
-        if(file.exists()){
+        if(!file.exists()){
             path.mkdir();
             try {
                 file.createNewFile();
