@@ -1,0 +1,10 @@
+main: de.pgspeed.suchten.main.Main
+name: Suchten
+version: 1.0
+
+commands:
+  position:
+    description: Position
+    aliases: [pos]
+  timer:
+    description: Minecraft Timer
