@@ -1,4 +1,4 @@
-package de.pgspeed.suchten.position.listener;
+package de.pgspeed.suchten.position.commands;
 
 import java.util.List;
 import java.util.ArrayList;

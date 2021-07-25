@@ -1,10 +1,11 @@
 package de.pgspeed.suchten.main;
 
 import org.bukkit.Bukkit;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import de.pgspeed.suchten.position.listener.PositionCommand;
+import de.pgspeed.suchten.position.commands.PositionCommand;
 import de.pgspeed.suchten.servermessages.PlayerJoin;
 import de.pgspeed.suchten.servermessages.PlayerQuit;
 import de.pgspeed.suchten.timer.Timer;
@@ -43,6 +44,10 @@ public class Main extends JavaPlugin{
         //Servermessages
         pluginManager.registerEvents(new PlayerJoin(), this);
         pluginManager.registerEvents(new PlayerQuit(), this);
+
+        FileConfiguration fileConfiguration = this.getConfig();
+        fileConfiguration.set("Test", 2);
+        this.saveConfig();
     }
 
     @Override

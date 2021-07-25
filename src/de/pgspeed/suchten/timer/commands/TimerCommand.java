@@ -26,7 +26,7 @@ public class TimerCommand implements CommandExecutor, TabCompleter{
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(sender instanceof Player){
             Player player = (Player)sender;
-            if(player.hasPermission("speedrun.timer")){
+            if(player.hasPermission("suchten.timer")){
                 Timer timer = Main.getInstance().getTimer();
                 
                 switch (args[0].toLowerCase()){
