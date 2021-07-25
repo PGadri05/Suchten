@@ -5,6 +5,8 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import de.pgspeed.suchten.position.listener.PositionCommand;
+import de.pgspeed.suchten.servermessages.PlayerJoin;
+import de.pgspeed.suchten.servermessages.PlayerQuit;
 import de.pgspeed.suchten.timer.Timer;
 import de.pgspeed.suchten.timer.commands.TimerCommand;
 import de.pgspeed.suchten.timer.listeners.TimerEnderDragonDeath;
@@ -20,7 +22,7 @@ public class Main extends JavaPlugin{
 
     @Override
     public void onLoad() {
-        
+        instance = this;
     }
 
     @Override
@@ -36,8 +38,11 @@ public class Main extends JavaPlugin{
         getCommand("timer").setTabCompleter(new TimerCommand());
         pluginManager.registerEvents(new TimerEnderDragonDeath(), this);
         pluginManager.registerEvents(new TimerPlayerDeath(), this);
+        
 
-
+        //Servermessages
+        pluginManager.registerEvents(new PlayerJoin(), this);
+        pluginManager.registerEvents(new PlayerQuit(), this);
     }
 
     @Override
