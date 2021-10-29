@@ -11,6 +11,8 @@ import de.pgspeed.suchten.timer.Timer;
 import de.pgspeed.suchten.timer.commands.TimerCommand;
 import de.pgspeed.suchten.timer.listeners.TimerEnderDragonDeath;
 import de.pgspeed.suchten.timer.listeners.TimerPlayerDeath;
+import de.pgspeed.suchten.challenges.runaway.Runaway;
+import de.pgspeed.suchten.challenges.runaway.commands.RunawayCommand;
 
 public class Main extends JavaPlugin{
     
@@ -19,6 +21,9 @@ public class Main extends JavaPlugin{
 
     //Timer
     private Timer timer;
+
+    //Runaway
+    private Runaway runaway;
 
     @Override
     public void onLoad() {
@@ -44,6 +49,10 @@ public class Main extends JavaPlugin{
         //Servermessages
         pluginManager.registerEvents(new PlayerJoin(), this);
         pluginManager.registerEvents(new PlayerQuit(), this);
+        
+        runaway = new Runaway();
+        
+        getCommand("runaway").setExecutor(new RunawayCommand());
 
     }
 
@@ -61,6 +70,10 @@ public class Main extends JavaPlugin{
     //Timer
     public Timer getTimer() {
         return timer;
+    }
+    //Runaway
+    public Runaway getRunaway(){
+        return runaway;
     }
 
 }

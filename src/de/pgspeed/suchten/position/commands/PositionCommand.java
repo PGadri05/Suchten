@@ -88,7 +88,7 @@ public class PositionCommand implements CommandExecutor, TabCompleter{
                 }
                 case "tp":{
                     if(!player.hasPermission("speedrun.position")){
-                        player.sendMessage("§c Kauf dir die Rechte bei Adi");
+                        player.sendMessage("§cKauf dir die Rechte bei Adi");
                         break;
                     }
                     if(args.length != 2){

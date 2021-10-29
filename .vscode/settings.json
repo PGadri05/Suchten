@@ -1,6 +1,7 @@
 {
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "d:\\aschm\\Dokumente\\Minecraft Server\\Server\\spigot-1.16.5.jar"
+        "d:\\aschm\\Dokumente\\Minecraft Server\\Server\\spigot-1.16.5.jar",
+        "d:\\Spiele\\Minecraftfun\\Spigot1_16_5\\spigot-1.16.5.jar"
     ]
 }

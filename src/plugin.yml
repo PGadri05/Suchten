@@ -8,3 +8,5 @@ commands:
     aliases: [pos]
   timer:
     description: Minecraft Timer
+  runaway:
+    description: Running challenge
